@@ -71,10 +71,30 @@ Tracks a list of books the user likes and also returns a list of reviews for the
 ### [BONUS] Interactive Prototype
 
 ## Schema 
-[This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+#### Book
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the each book (default field) |
+   | title         | String   | title of the book|
+   | author        | String   | author of book |
+   | image         | File     | image of the book |
+   | synopsis      | String   | summary of the book |
+   | ReviewCount   | Number   | number of reviews for each book |
+   | Review        | String   | user's review of the book 
+   | Rating        | Number   | user's rating of the book |
+   
+### User
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | userId        | String   | unique id for the each user (default field) |
+   | username      | String   | name of the user|
+   | password      | String   | account password |
+
+
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
+
