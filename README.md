@@ -94,7 +94,21 @@ Tracks a list of books the user likes and also returns a list of reviews for the
 
 
 ### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+
+- Sign Up Screen
+    - (create/POST) Create a new user and save to database
+
+- Book List Screen
+    - (Read/GET) Retrieve recommended books
+    - (Read/GET) Retrieve books by title (user input)
+
+- Book Details Screen
+    - (Read/GET) Retrieve book summary 
+    - (Read/GET) Retrieve rating count
+
+- Review List Screen
+    -  (Read/GET) all reviews for chosen book
+
+- Review Details Screen
+    -  (Read/GET) retrieve review details 
 
