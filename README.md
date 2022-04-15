@@ -112,3 +112,9 @@ Tracks a list of books the user likes and also returns a list of reviews for the
 - Review Details Screen
     -  (Read/GET) retrieve review details 
 
+## Video Walkthrough
+
+Here's a walkthrough of implemented user stories:
+
+<img src='http://g.recordit.co/xmS8LQHDiL.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
