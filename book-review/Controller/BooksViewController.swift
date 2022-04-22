@@ -8,26 +8,39 @@
 import UIKit
 
 
-class BooksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+class BooksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     var books = Books.books
     var searchTerm = "Harry+Potter"
     @IBOutlet weak var tableView: UITableView!
     
-    let searchController = UISearchController(searchResultsController: ResultsTableViewController())
+//    let searchController = UISearchController(searchResultsController: ResultsTableViewController())
+    
+    @IBOutlet weak var userSearchInput: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-
+        userSearchInput.delegate = self
         searchForBooks(searchTerm)
         
         
-        navigationItem.searchController = searchController
+//        navigationItem.searchController = searchController
 //        searchController.obscuresBackgroundDuringPresentation = true
-        searchController.searchResultsUpdater = self
-        searchController.searchBar.placeholder = "Find a book"
-        searchController.searchBar.delegate = self
+//        searchController.searchResultsUpdater = self
+//        searchController.searchBar.placeholder = "Find a book"
+//        searchController.searchBar.delegate = self
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if let text = userSearchInput.text {
+            print(text)
+            searchForBooks(cleanString(text))
+        }
+    }
+
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        print("hi hi hi")
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return books.bookList.count
@@ -94,12 +107,12 @@ class BooksViewController: UIViewController, UITableViewDelegate, UITableViewDat
 }
 
 //MARK: - Updating search result
-extension BooksViewController: UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) {
-        guard let text = searchController.searchBar.text else {
-            return
-        }
-        
-        searchForBooks(text)
-    }
-}
+//extension BooksViewController: UISearchResultsUpdating {
+//    func updateSearchResults(for searchController: UISearchController) {
+//        guard let text = searchController.searchBar.text else {
+//            return
+//        }
+//
+//        searchForBooks(text)
+//    }
+//}
