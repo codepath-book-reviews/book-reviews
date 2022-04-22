@@ -11,6 +11,7 @@
 		04D51AB12813035900990CDA /* AddReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D51AB02813035900990CDA /* AddReviewViewController.swift */; };
 		04D51AB32813037F00990CDA /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D51AB22813037F00990CDA /* ReviewCell.swift */; };
 		20E9105BAFA25C59A1C97AC1 /* Pods_book_review.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9C40080AEE235CD3EE2E20 /* Pods_book_review.framework */; };
+		300DD4E7281316EE004B880B /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300DD4E6281316EE004B880B /* ResultsTableViewController.swift */; };
 		3039038328094B40003457E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3039038228094B40003457E1 /* AppDelegate.swift */; };
 		3039038528094B40003457E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3039038428094B40003457E1 /* SceneDelegate.swift */; };
 		3039038728094B40003457E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3039038628094B40003457E1 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 		30390397280B6AF3003457E1 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30390396280B6AF3003457E1 /* BooksViewController.swift */; };
 		30390399280B719F003457E1 /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30390398280B719F003457E1 /* BookCell.swift */; };
 		303903A1280B946E003457E1 /* BookList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303903A0280B946E003457E1 /* BookList.swift */; };
+		303903A32810877D003457E1 /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303903A22810877D003457E1 /* Books.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,7 @@
 		04D51AB02813035900990CDA /* AddReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewViewController.swift; sourceTree = "<group>"; };
 		04D51AB22813037F00990CDA /* ReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
 		1E4251FE3735AC8B08230199 /* Pods-book-review.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-book-review.release.xcconfig"; path = "Target Support Files/Pods-book-review/Pods-book-review.release.xcconfig"; sourceTree = "<group>"; };
+		300DD4E6281316EE004B880B /* ResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
 		3039037F28094B40003457E1 /* book-review.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "book-review.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3039038228094B40003457E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3039038428094B40003457E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +41,7 @@
 		30390396280B6AF3003457E1 /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 		30390398280B719F003457E1 /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
 		303903A0280B946E003457E1 /* BookList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookList.swift; sourceTree = "<group>"; };
+		303903A22810877D003457E1 /* Books.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
 		B922B70EF494C704395670C0 /* Pods-book-review.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-book-review.debug.xcconfig"; path = "Target Support Files/Pods-book-review/Pods-book-review.debug.xcconfig"; sourceTree = "<group>"; };
 		DD9C40080AEE235CD3EE2E20 /* Pods_book_review.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_book_review.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -83,6 +87,7 @@
 		3039038128094B40003457E1 /* book-review */ = {
 			isa = PBXGroup;
 			children = (
+				303903A428108884003457E1 /* Singleton */,
 				3039039B280B866E003457E1 /* Model */,
 				3039039A280B8649003457E1 /* Controller */,
 				3039038228094B40003457E1 /* AppDelegate.swift */,
@@ -104,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				30390396280B6AF3003457E1 /* BooksViewController.swift */,
+				300DD4E6281316EE004B880B /* ResultsTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -114,6 +120,14 @@
 				303903A0280B946E003457E1 /* BookList.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		303903A428108884003457E1 /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				303903A22810877D003457E1 /* Books.swift */,
+			);
+			path = Singleton;
 			sourceTree = "<group>";
 		};
 		FFEF71746890B05006FB5602 /* Pods */ = {
@@ -240,12 +254,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				300DD4E7281316EE004B880B /* ResultsTableViewController.swift in Sources */,
 				303903A1280B946E003457E1 /* BookList.swift in Sources */,
 				04D51AAF2813034400990CDA /* ReviewListViewController.swift in Sources */,
 				04D51AB12813035900990CDA /* AddReviewViewController.swift in Sources */,
 				3039038728094B40003457E1 /* ViewController.swift in Sources */,
 				04D51AB32813037F00990CDA /* ReviewCell.swift in Sources */,
 				30390397280B6AF3003457E1 /* BooksViewController.swift in Sources */,
+				303903A32810877D003457E1 /* Books.swift in Sources */,
 				3039038328094B40003457E1 /* AppDelegate.swift in Sources */,
 				3039038528094B40003457E1 /* SceneDelegate.swift in Sources */,
 				30390399280B719F003457E1 /* BookCell.swift in Sources */,
