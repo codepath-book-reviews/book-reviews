@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04D51AAF2813034400990CDA /* ReviewListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D51AAE2813034400990CDA /* ReviewListViewController.swift */; };
+		04D51AB12813035900990CDA /* AddReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D51AB02813035900990CDA /* AddReviewViewController.swift */; };
+		04D51AB32813037F00990CDA /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D51AB22813037F00990CDA /* ReviewCell.swift */; };
 		20E9105BAFA25C59A1C97AC1 /* Pods_book_review.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD9C40080AEE235CD3EE2E20 /* Pods_book_review.framework */; };
 		3039038328094B40003457E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3039038228094B40003457E1 /* AppDelegate.swift */; };
 		3039038528094B40003457E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3039038428094B40003457E1 /* SceneDelegate.swift */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04D51AAE2813034400990CDA /* ReviewListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListViewController.swift; sourceTree = "<group>"; };
+		04D51AB02813035900990CDA /* AddReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewViewController.swift; sourceTree = "<group>"; };
+		04D51AB22813037F00990CDA /* ReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
 		1E4251FE3735AC8B08230199 /* Pods-book-review.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-book-review.release.xcconfig"; path = "Target Support Files/Pods-book-review/Pods-book-review.release.xcconfig"; sourceTree = "<group>"; };
 		3039037F28094B40003457E1 /* book-review.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "book-review.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3039038228094B40003457E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +89,9 @@
 				3039038428094B40003457E1 /* SceneDelegate.swift */,
 				3039038628094B40003457E1 /* ViewController.swift */,
 				3039038828094B40003457E1 /* Main.storyboard */,
+				04D51AAE2813034400990CDA /* ReviewListViewController.swift */,
+				04D51AB02813035900990CDA /* AddReviewViewController.swift */,
+				04D51AB22813037F00990CDA /* ReviewCell.swift */,
 				3039038B28094B41003457E1 /* Assets.xcassets */,
 				3039038D28094B41003457E1 /* LaunchScreen.storyboard */,
 				30390398280B719F003457E1 /* BookCell.swift */,
@@ -232,7 +241,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				303903A1280B946E003457E1 /* BookList.swift in Sources */,
+				04D51AAF2813034400990CDA /* ReviewListViewController.swift in Sources */,
+				04D51AB12813035900990CDA /* AddReviewViewController.swift in Sources */,
 				3039038728094B40003457E1 /* ViewController.swift in Sources */,
+				04D51AB32813037F00990CDA /* ReviewCell.swift in Sources */,
 				30390397280B6AF3003457E1 /* BooksViewController.swift in Sources */,
 				3039038328094B40003457E1 /* AppDelegate.swift in Sources */,
 				3039038528094B40003457E1 /* SceneDelegate.swift in Sources */,
