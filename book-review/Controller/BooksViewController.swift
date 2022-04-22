@@ -39,8 +39,9 @@ class BooksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
 
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        print("hi hi hi")
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return books.bookList.count
