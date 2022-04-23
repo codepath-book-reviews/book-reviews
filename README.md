@@ -118,3 +118,6 @@ Here's a walkthrough of implemented user stories:
 
 <img src='http://g.recordit.co/xmS8LQHDiL.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
+Updated Walkthrough with added login functionality
+<img src='http://g.recordit.co/iHSVNs4S9x.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
