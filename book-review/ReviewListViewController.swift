@@ -114,8 +114,14 @@ class ReviewListViewController: UIViewController, UITableViewDelegate, UITableVi
             let cell = sender as! UITableViewCell
             let indexPath = tableView.indexPath(for: cell)!
             let review = reviews[indexPath.row]
-//            let showDetailsViewController = segue.destination as! showDetailsViewController
-//            showDetailsViewController.review = review;
+            
+            let showDetailsViewController = segue.destination as! DetailsReviewViewController
+            showDetailsViewController.review = review["Review"] as! String
+            showDetailsViewController.Title = review["Title"] as! String
+            let author = review["Author"] as! PFUser
+            showDetailsViewController.author = author.username!
+
+            
             tableView.deselectRow(at: indexPath, animated: true)
         }
     }

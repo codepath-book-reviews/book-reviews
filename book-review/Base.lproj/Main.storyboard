@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uxb-Uh-aOl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uxb-Uh-aOl">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -384,10 +384,10 @@
             </objects>
             <point key="canvasLocation" x="5614" y="1570"/>
         </scene>
-        <!--ReviewCell-->
+        <!--DetailsReviewViewController-->
         <scene sceneID="dLC-Vl-mcd">
             <objects>
-                <viewController title="ReviewCell" id="HhL-u0-ZAb" customClass="ReviewCell" sceneMemberID="viewController">
+                <viewController title="DetailsReviewViewController" id="HhL-u0-ZAb" customClass="DetailsReviewViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8cR-Sq-GnX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -418,6 +418,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="Q9H-uB-3Tt"/>
+                    <connections>
+                        <outlet property="authorLabel" destination="msC-QI-hdR" id="EDh-m2-Kjj"/>
+                        <outlet property="reviewLabel" destination="KLt-GT-Cnw" id="tnJ-2i-faf"/>
+                        <outlet property="titleLabel" destination="sUf-Mg-96R" id="7m6-og-p9C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fkW-mX-EGp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
