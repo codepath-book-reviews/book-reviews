@@ -23,7 +23,7 @@ class DetailsReviewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        titleLabel.text = title //review["Title"] as? String
+        titleLabel.text = Title //review["Title"] as? String
         reviewLabel.text = review //review["Review"] as? String
         //let author = review["Author"] as! PFUser
         authorLabel.text = author

@@ -387,7 +387,7 @@
         <!--DetailsReviewViewController-->
         <scene sceneID="dLC-Vl-mcd">
             <objects>
-                <viewController title="DetailsReviewViewController" id="HhL-u0-ZAb" customClass="DetailsReviewViewController" sceneMemberID="viewController">
+                <viewController title="DetailsReviewViewController" id="HhL-u0-ZAb" customClass="DetailsReviewViewController" customModule="book_review" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8cR-Sq-GnX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
