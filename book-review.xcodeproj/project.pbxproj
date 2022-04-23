@@ -22,6 +22,7 @@
 		30390399280B719F003457E1 /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30390398280B719F003457E1 /* BookCell.swift */; };
 		303903A1280B946E003457E1 /* BookList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303903A0280B946E003457E1 /* BookList.swift */; };
 		303903A32810877D003457E1 /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303903A22810877D003457E1 /* Books.swift */; };
+		8C30091D2813620B004551A4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C30091C2813620B004551A4 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		30390398280B719F003457E1 /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
 		303903A0280B946E003457E1 /* BookList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookList.swift; sourceTree = "<group>"; };
 		303903A22810877D003457E1 /* Books.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
+		8C30091C2813620B004551A4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B922B70EF494C704395670C0 /* Pods-book-review.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-book-review.debug.xcconfig"; path = "Target Support Files/Pods-book-review/Pods-book-review.debug.xcconfig"; sourceTree = "<group>"; };
 		DD9C40080AEE235CD3EE2E20 /* Pods_book_review.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_book_review.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -101,6 +103,7 @@
 				3039038D28094B41003457E1 /* LaunchScreen.storyboard */,
 				30390398280B719F003457E1 /* BookCell.swift */,
 				3039039028094B41003457E1 /* Info.plist */,
+				8C30091C2813620B004551A4 /* LoginViewController.swift */,
 			);
 			path = "book-review";
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C30091D2813620B004551A4 /* LoginViewController.swift in Sources */,
 				300DD4E7281316EE004B880B /* ResultsTableViewController.swift in Sources */,
 				303903A1280B946E003457E1 /* BookList.swift in Sources */,
 				04D51AAF2813034400990CDA /* ReviewListViewController.swift in Sources */,
