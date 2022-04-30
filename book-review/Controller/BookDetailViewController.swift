@@ -13,8 +13,8 @@ class BookDetailViewController: UIViewController {
     @IBOutlet weak var authorLabel: UILabel!
 
     @IBOutlet weak var bookCover: UIImageView!
+
     @IBOutlet weak var descriptionLabel: UITextView!
-//    @IBOutlet weak var descriptionLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 

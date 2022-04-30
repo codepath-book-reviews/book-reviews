@@ -28,10 +28,10 @@ Tracks a list of books the user likes and also returns a list of reviews for the
 
 **Required Must-have Stories**
 
-* User logs in to see a list of book fetched from the API
-* User picks a book from the list to open the detail view
-* In the detail view, the user can read a synopsis of the book and also view some of the reviews of the book
-* In the review list, the user can read what other people thought of the book.
+- [x] User logs in to see a list of book fetched from the API
+- [x] User picks a book from the list to open the detail view
+- [x] In the detail view, the user can read a synopsis of the book and also view some of the reviews of the book
+- [x] In the review list, the user can read what other people thought of the book.
 
 **Optional Nice-to-have Stories**
 
@@ -117,4 +117,12 @@ Tracks a list of books the user likes and also returns a list of reviews for the
 Here's a walkthrough of implemented user stories:
 
 <img src='http://g.recordit.co/xmS8LQHDiL.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+Updated Walkthrough with added functionality:
+
+<img src='http://g.recordit.co/HcBQ8nlBJy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+Updated Walkthrough with styling:
+
+<img src='http://g.recordit.co/Q6A8XWeNC5.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 

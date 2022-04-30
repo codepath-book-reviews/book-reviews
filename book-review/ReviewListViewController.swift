@@ -10,9 +10,13 @@ import Parse
 
 class ReviewListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var bookLabel: UILabel!
     @IBOutlet var tableView: UITableView!
 //    var bookID: [String:Any]!
     var bookID = "ddkahfk"
+    var bookTitle = "Book Title \n"
+    var bookAuthor = "Book Author"
+    var bookMutable = NSMutableAttributedString()
         var reviews = [PFObject]()
         let reviewAmount = 20
         
@@ -21,16 +25,23 @@ class ReviewListViewController: UIViewController, UITableViewDelegate, UITableVi
         override func viewDidLoad() {
             
             super.viewDidLoad()
-            let username = "test"
-            let password = "Pass"
-            PFUser.logInWithUsername(inBackground: username, password: password){(user, error) in
-                if user != nil{
-                    print("Logged in")
-                }
-            }
+//            let username = "test"
+//            let password = "Pass"
+//            PFUser.logInWithUsername(inBackground: username, password: password){(user, error) in
+//                if user != nil{
+//                    print("Logged in")
+//                }
+//            }
             tableView.delegate = self
             tableView.dataSource = self
+            let titleLength = bookTitle.count
+            let authorLength = bookAuthor.count
+            let BookDetail = NSMutableAttributedString.init(string:bookTitle + bookAuthor)
+            BookDetail.setAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12),
+                                       NSAttributedString.Key.foregroundColor: UIColor.gray], range: NSRange(location: titleLength, length: authorLength))
             
+            bookLabel.attributedText = BookDetail
+            bookLabel.layer.addWaghaBorder(edge: .bottom, color: UIColor.lightGray, thickness: 1)
             myRefreshControl.addTarget(self, action: #selector(loadReviews), for: .valueChanged)
             tableView.refreshControl = myRefreshControl
             tableView.keyboardDismissMode = .interactive
@@ -114,10 +125,40 @@ class ReviewListViewController: UIViewController, UITableViewDelegate, UITableVi
             let cell = sender as! UITableViewCell
             let indexPath = tableView.indexPath(for: cell)!
             let review = reviews[indexPath.row]
-//            let showDetailsViewController = segue.destination as! showDetailsViewController
-//            showDetailsViewController.review = review;
+            
+            let showDetailsViewController = segue.destination as! DetailsReviewViewController
+            showDetailsViewController.review = review["Review"] as! String
+            showDetailsViewController.Title = review["Title"] as! String
+            let author = review["Author"] as! PFUser
+            showDetailsViewController.author = author.username!
+
+            
             tableView.deselectRow(at: indexPath, animated: true)
         }
     }
 
+}
+
+extension CALayer {
+    func addWaghaBorder(edge: UIRectEdge, color: UIColor, thickness: CGFloat) {
+        let border = CALayer()
+        switch edge {
+            case UIRectEdge.top:
+                border.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: 1)
+                break
+            case UIRectEdge.bottom:
+                border.frame = CGRect(x: 0, y: self.frame.height - 1, width: self.frame.width, height: 1)
+                break
+            case UIRectEdge.left:
+                border.frame = CGRect(x: 0, y: 0, width: 1, height: self.frame.height)
+                break
+            case UIRectEdge.right:
+                border.frame = CGRect(x: self.frame.width - 1, y: 0, width: 1, height: self.frame.height)
+                break
+            default:
+                break
+        }
+        border.backgroundColor = color.cgColor;
+        self.addSublayer(border)
+    }
 }
