@@ -11,7 +11,7 @@ import Foundation
 // All data for books in this app will be stored here for easy access
 class Books {
     static let books = Books()
-    var chosenBook: BookModel?
+    var chosenBook = ""
     var bookList = [BookModel]()
     // This prevents others from using the default '()' initializer for this class.
     private init() {}
