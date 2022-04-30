@@ -16,27 +16,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Landing Image" translatesAutoresizingMaskIntoConstraints="NO" id="fUW-EN-ILQ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Landing Image" translatesAutoresizingMaskIntoConstraints="NO" id="fUW-EN-ILQ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YJY-hQ-QN1" userLabel="Overlay">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YJY-hQ-QN1" userLabel="Overlay">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book Reviews" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKI-b2-T5R">
+                                        <rect key="frame" x="28" y="419.5" width="358" height="57"/>
+                                        <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="50"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="0.5846748737373737" green="0.5846748737373737" blue="0.5846748737373737" alpha="0.41217404801324503" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="PKI-b2-T5R" firstAttribute="centerX" secondItem="YJY-hQ-QN1" secondAttribute="centerX" id="AYm-IA-iLY"/>
+                                    <constraint firstItem="PKI-b2-T5R" firstAttribute="centerY" secondItem="YJY-hQ-QN1" secondAttribute="centerY" id="i9n-s8-SL4"/>
+                                </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Book Reviews" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKI-b2-T5R">
-                                <rect key="frame" x="63" y="130" width="287" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="40"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="YJY-hQ-QN1" secondAttribute="bottom" id="2oo-XF-XV1"/>
+                            <constraint firstItem="fUW-EN-ILQ" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailing" id="6Tz-bm-1I6"/>
+                            <constraint firstItem="YJY-hQ-QN1" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailing" id="DDe-vi-1eV"/>
+                            <constraint firstAttribute="bottom" secondItem="fUW-EN-ILQ" secondAttribute="bottom" id="LaD-CH-57O"/>
+                            <constraint firstItem="fUW-EN-ILQ" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Pn8-rj-v3j"/>
+                            <constraint firstItem="YJY-hQ-QN1" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Y1q-oS-ZJJ"/>
+                            <constraint firstItem="YJY-hQ-QN1" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="dWQ-Pi-9Wc"/>
+                            <constraint firstItem="fUW-EN-ILQ" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="x5m-qx-fop"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
