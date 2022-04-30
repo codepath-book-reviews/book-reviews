@@ -187,7 +187,7 @@
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Pkd-mJ-MHT"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.4392156862745098" green="0.68627450980392157" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="UQs-vW-Wn0"/>
                     <connections>
