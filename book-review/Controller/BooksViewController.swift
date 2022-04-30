@@ -7,6 +7,7 @@
 
 import UIKit
 import AlamofireImage
+import Parse
 
 class BooksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     var books = Books.books
@@ -102,7 +103,15 @@ class BooksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
-    // trims the input string and returns it with all spaces (" ") replace by "+"
+    @IBAction func onLogOutPress(_ sender: Any) {
+        PFUser.logOut()
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        let loginViewController = main.instantiateViewController(withIdentifier: "LoginViewController")
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+                let delegate = windowScene.delegate as? SceneDelegate else {return}
+        delegate.window?.rootViewController = loginViewController
+    }
+        // trims the input string and returns it with all spaces (" ") replace by "+"
     func cleanString(_ str: String) -> String {
         let trimmedString = str.trimmingCharacters(in: .whitespacesAndNewlines)
         return trimmedString.split(separator: " ").joined(separator: "+")

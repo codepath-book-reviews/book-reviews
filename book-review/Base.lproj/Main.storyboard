@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uxb-Uh-aOl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7S5-8Z-zwh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -16,16 +16,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recommended" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ja-eA-IJr">
-                                <rect key="frame" x="0.0" y="106" width="414" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recommended" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ja-eA-IJr">
+                                <rect key="frame" x="0.0" y="150" width="414" height="20.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.4880839845146796" green="0.4880839845146796" blue="0.4880839845146796" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Find a book" translatesAutoresizingMaskIntoConstraints="NO" id="igy-AV-svb">
-                                <rect key="frame" x="0.0" y="44" width="414" height="51"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="121" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="WTC-BU-pp6">
                                 <rect key="frame" x="0.0" y="179" width="414" height="717"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -96,20 +93,22 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" placeholder="Find a book" translatesAutoresizingMaskIntoConstraints="NO" id="igy-AV-svb">
+                                <rect key="frame" x="0.0" y="88" width="414" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="3Ja-eA-IJr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VrD-9i-Dsq"/>
-                            <constraint firstItem="igy-AV-svb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Xcl-Jb-9yO"/>
-                            <constraint firstItem="igy-AV-svb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ye9-hv-dW4"/>
-                            <constraint firstItem="3Ja-eA-IJr" firstAttribute="top" secondItem="igy-AV-svb" secondAttribute="bottom" constant="11" id="ZMN-6o-P4K"/>
-                            <constraint firstItem="igy-AV-svb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c0t-iG-bba"/>
-                            <constraint firstItem="3Ja-eA-IJr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hV1-G5-CLa"/>
-                            <constraint firstItem="igy-AV-svb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lhC-Ha-OEz"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="All Books" id="Gvt-UA-dem"/>
+                    <navigationItem key="navigationItem" title="All Books" id="Gvt-UA-dem">
+                        <barButtonItem key="rightBarButtonItem" title="Log out" id="Ed6-7D-AGN">
+                            <connections>
+                                <action selector="onLogOutPress:" destination="BYZ-38-t0r" id="Sru-Zv-8d7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="igy-AV-svb" id="Ui4-ra-iy0"/>
                         <outlet property="tableView" destination="WTC-BU-pp6" id="ieQ-s5-wmi"/>
@@ -200,10 +199,10 @@
             </objects>
             <point key="canvasLocation" x="5768.115942028986" y="114.50892857142857"/>
         </scene>
-        <!--Login View Controller-->
+        <!--LoginViewController-->
         <scene sceneID="Q5T-uu-avW">
             <objects>
-                <viewController id="uxb-Uh-aOl" customClass="LoginViewController" customModule="book_review" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" title="LoginViewController" id="uxb-Uh-aOl" customClass="LoginViewController" customModule="book_review" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nbN-5C-hi1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -561,6 +560,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="USb-Yv-LYv">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <navigationBarAppearance key="standardAppearance"/>
+                        <navigationBarAppearance key="scrollEdgeAppearance"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
