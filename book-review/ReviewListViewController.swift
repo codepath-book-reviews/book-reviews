@@ -34,7 +34,7 @@ class ReviewListViewController: UIViewController, UITableViewDelegate, UITableVi
                                                             attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12),
                                                                          NSAttributedString.Key.foregroundColor: UIColor.gray]));
                 bookLabel.attributedText = bookInfo
-                bookLabel.layer.addWaghaBorder(edge: .bottom, color: UIColor.lightGray, thickness: 1)
+                bookLabel.layer.addWaghaBorder(edge: .bottom, color: UIColor.lightGray, thickness: 5)
             }
             myRefreshControl.addTarget(self, action: #selector(loadReviews), for: .valueChanged)
             tableView.refreshControl = myRefreshControl
@@ -88,15 +88,17 @@ class ReviewListViewController: UIViewController, UITableViewDelegate, UITableVi
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewCell") as! ReviewCell
             let review = reviews[indexPath.row]
-            let title = review["Title"] as! String
+            let title = NSMutableAttributedString(string: review["Title"] as! String,
+                                                attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 15),
+                                                             NSAttributedString.Key.foregroundColor: UIColor.black]);
             let author = review["Author"] as! PFUser
-            let Review = review["Review"] as! String
-            
-            
-            cell.titleLabel.text = title
+            let Review = NSMutableAttributedString(string: review["Review"] as! String,
+                                                        attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 10),
+                                                                     NSAttributedString.Key.foregroundColor: UIColor.gray])
+            cell.titleLabel.attributedText = title
             cell.authorLabel.text = "-" + author.username!
-            cell.reviewLabel.text = Review
-            
+            cell.reviewLabel.attributedText = Review
+            cell.layer.addWaghaBorder(edge: .bottom, color: UIColor.lightGray, thickness: 1)
             return cell
         }
     

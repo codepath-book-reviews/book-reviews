@@ -21,8 +21,6 @@ class AddReviewViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    
     @IBAction func addReview(_ sender: Any) {
         if let book = Books.books.chosenBook {
             bookID = book.id

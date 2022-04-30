@@ -383,6 +383,7 @@
                                         <constraint firstItem="dBs-gW-5h4" firstAttribute="bottom" secondItem="o6X-wD-4l1" secondAttribute="bottomMargin" constant="10" id="yLN-fh-AjK"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.85933142900000004" green="0.88619726899999995" blue="0.93528556819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="authorLabel" destination="dBs-gW-5h4" id="VDw-Qo-J9d"/>
                                     <outlet property="reviewLabel" destination="ajj-iP-VHQ" id="yOa-Sf-cRb"/>
