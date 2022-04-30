@@ -12,11 +12,7 @@ class ReviewListViewController: UIViewController, UITableViewDelegate, UITableVi
 
     @IBOutlet weak var bookLabel: UILabel!
     @IBOutlet var tableView: UITableView!
-//    var bookID: [String:Any]!
-    var bookID = "ddkahfk"
-    var bookTitle = "Book Title \n"
-    var bookAuthor = "Book Author"
-    var bookMutable = NSMutableAttributedString()
+    var bookID = ""
         var reviews = [PFObject]()
         let reviewAmount = 20
         
@@ -25,23 +21,21 @@ class ReviewListViewController: UIViewController, UITableViewDelegate, UITableVi
         override func viewDidLoad() {
             
             super.viewDidLoad()
-//            let username = "test"
-//            let password = "Pass"
-//            PFUser.logInWithUsername(inBackground: username, password: password){(user, error) in
-//                if user != nil{
-//                    print("Logged in")
-//                }
-//            }
             tableView.delegate = self
             tableView.dataSource = self
-            let titleLength = bookTitle.count
-            let authorLength = bookAuthor.count
-            let BookDetail = NSMutableAttributedString.init(string:bookTitle + bookAuthor)
-            BookDetail.setAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12),
-                                       NSAttributedString.Key.foregroundColor: UIColor.gray], range: NSRange(location: titleLength, length: authorLength))
             
-            bookLabel.attributedText = BookDetail
-            bookLabel.layer.addWaghaBorder(edge: .bottom, color: UIColor.lightGray, thickness: 1)
+            if let book = Books.books.chosenBook {
+                bookID = book.id
+                let bookInfo = NSMutableAttributedString(string: book.volumeInfo.title,
+                                                           attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20),
+                                                                        NSAttributedString.Key.foregroundColor: UIColor.black]);
+
+                bookInfo.append(NSMutableAttributedString(string: "\n" + book.volumeInfo.authors[0],
+                                                            attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12),
+                                                                         NSAttributedString.Key.foregroundColor: UIColor.gray]));
+                bookLabel.attributedText = bookInfo
+                bookLabel.layer.addWaghaBorder(edge: .bottom, color: UIColor.lightGray, thickness: 1)
+            }
             myRefreshControl.addTarget(self, action: #selector(loadReviews), for: .valueChanged)
             tableView.refreshControl = myRefreshControl
             tableView.keyboardDismissMode = .interactive
@@ -53,6 +47,7 @@ class ReviewListViewController: UIViewController, UITableViewDelegate, UITableVi
             loadReviews()
         }
         @objc func loadReviews(){
+            print("ID: ", bookID)
             let query = PFQuery(className: "Reviews")
             query.whereKey("BookID", equalTo:bookID as Any)
             query.includeKey("Author")

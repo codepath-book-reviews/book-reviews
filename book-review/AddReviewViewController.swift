@@ -13,8 +13,8 @@ class AddReviewViewController: UIViewController {
 
     @IBOutlet weak var titleField: UITextField!
     @IBOutlet weak var reviewField: UITextView!
-//    var bookID: [String:Any]!
-    var bookID = "ddkahfk"
+    let book = Books.books.chosenBook
+    var bookID = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         titleField.placeholder = "Title"
@@ -24,40 +24,26 @@ class AddReviewViewController: UIViewController {
 
     
     @IBAction func addReview(_ sender: Any) {
-        print(bookID as Any)
-        let review = PFObject(className: "Reviews")
-        review["BookID"] = bookID
-        review["Title"] = titleField.text!
-        review["Review"] = reviewField.text!
-        review["Author"] = PFUser.current()!
-        
-        review.saveInBackground { (success, error) in
-            if success{
-                self.navigationController?.popViewController(animated: true)
-                print("saved!")
-            }
-            else{
-                print("error!")
+        if let book = Books.books.chosenBook {
+            bookID = book.id
+            print(bookID as Any)
+            let review = PFObject(className: "Reviews")
+            review["BookID"] = bookID
+            review["Title"] = titleField.text!
+            review["Review"] = reviewField.text!
+            review["Author"] = PFUser.current()!
+            
+            review.saveInBackground { (success, error) in
+                if success{
+                    self.navigationController?.popViewController(animated: true)
+                    print("saved!")
+                }
+                else{
+                    print("error!")
+                }
             }
         }
     }
-    //    @IBAction func addReview(_ sender: Any) {
-//        print(bookID as Any)
-//            let review = PFObject(className: "Reviews")
-//            review["BookID"] = bookID
-//            review["Title"] = titleField.text!
-//            review["Review"] = reviewField.text!
-//            review["Author"] = PFUser.current()!
-//            review.saveInBackground { (success, error) in
-//                if success{
-//                    self.dismiss(animated: true, completion: nil)
-//                    print("saved!")
-//                }
-//                else{
-//                    print("error!")
-//                }
-//            }
-//        }
     /*
     // MARK: - Navigation
 
