@@ -16,9 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recommended" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ja-eA-IJr">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recommended" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ja-eA-IJr">
                                 <rect key="frame" x="0.0" y="150" width="414" height="20.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.4880839845146796" green="0.4880839845146796" blue="0.4880839845146796" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -93,14 +92,23 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" placeholder="Find a book" translatesAutoresizingMaskIntoConstraints="NO" id="igy-AV-svb">
-                                <rect key="frame" x="0.0" y="88" width="414" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Find a book" translatesAutoresizingMaskIntoConstraints="NO" id="igy-AV-svb">
+                                <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3Ja-eA-IJr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="05K-Ff-f1Y"/>
+                            <constraint firstItem="igy-AV-svb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0bV-1d-FZj"/>
+                            <constraint firstItem="3Ja-eA-IJr" firstAttribute="top" secondItem="igy-AV-svb" secondAttribute="bottom" constant="10" id="6qh-cf-oJ9"/>
+                            <constraint firstItem="3Ja-eA-IJr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="F5s-Vu-436"/>
+                            <constraint firstItem="WTC-BU-pp6" firstAttribute="top" secondItem="3Ja-eA-IJr" secondAttribute="bottom" constant="8.5" id="KbT-bf-7hc"/>
+                            <constraint firstItem="3Ja-eA-IJr" firstAttribute="top" secondItem="igy-AV-svb" secondAttribute="bottom" constant="10" id="NDG-cS-c5l"/>
+                            <constraint firstItem="igy-AV-svb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QFO-hS-OxC"/>
+                            <constraint firstItem="igy-AV-svb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="stD-21-Elx"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="All Books" id="Gvt-UA-dem">
                         <barButtonItem key="rightBarButtonItem" title="Log out" id="Ed6-7D-AGN">
