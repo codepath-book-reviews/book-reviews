@@ -23,12 +23,12 @@ struct BookDetail: Codable {
     let averageRating: Double?
     let ratingsCount: Int?
     let description: String?
-    let imageLinks:  Images
+    let imageLinks:  Images?
 }
 
 struct Images: Codable {
 //    let smallThumbnail: String
-    let thumbnail: String
+    let thumbnail: String?
 //    let small: String
 //    let medium: String
 //    let large: String

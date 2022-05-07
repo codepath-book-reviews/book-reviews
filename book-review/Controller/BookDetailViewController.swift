@@ -21,9 +21,9 @@ class BookDetailViewController: UIViewController {
         if let book = Books.books.chosenBook {
             let bookInfo = book.volumeInfo
             
-            let thumbnail = book.volumeInfo.imageLinks.thumbnail
+            let thumbnail = book.volumeInfo.imageLinks?.thumbnail
             
-            let thumbnailURL = URL(string: thumbnail)!
+            let thumbnailURL = URL(string: thumbnail!)!
             
             titleLabel.text = bookInfo.title
             authorLabel.text = bookInfo.authors[0]

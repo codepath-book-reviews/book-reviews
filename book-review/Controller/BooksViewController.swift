@@ -49,13 +49,15 @@ class BooksViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
         let title = bookDetails.title
         let author = bookDetails.authors[0]
-        let thumbnail = bookDetails.imageLinks.thumbnail
+        let thumbnail = bookDetails.imageLinks?.thumbnail ?? nil
         
-        let thumbnailURL = URL(string: thumbnail)!
+        if thumbnail != nil {
+            let thumbnailURL = URL(string: thumbnail!)!
+            cell.coverImage.af.setImage(withURL: thumbnailURL)
+        }
         
         cell.titleLabel.text = title
         cell.authorLabel.text = author
-        cell.coverImage.af.setImage(withURL: thumbnailURL)
         return cell
     }
     
@@ -69,7 +71,7 @@ class BooksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         do {
 
             let decodedBookList = try decoder.decode(BookList.self, from: bookList)
- 
+
             return decodedBookList.items
         } catch {
             return nil
@@ -77,7 +79,7 @@ class BooksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
 
     func searchForBooks(_ searchTerm: String) {
-        print(searchTerm)
+
         if searchTerm.count == 0 {
             return
         }
@@ -86,16 +88,18 @@ class BooksViewController: UIViewController, UITableViewDelegate, UITableViewDat
             let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
             let task = session.dataTask(with: url) { (data, response, error) in
 
-                let dataString = String(data: data!, encoding: String.Encoding.utf8)! as String
-                print(dataString)
+//                let dataString = String(data: data!, encoding: String.Encoding.utf8)! as String
+//                print(dataString)
 //                 This will run when the network request returns
+
                 if let error = error {
                     print(error.localizedDescription)
-                } else if let data = data {
-                    if let bookList = self.parseJSON(data) {
+                } else if let legitData = data {
+
+                    if let bookList = self.parseJSON(legitData) {
     
                         self.books.bookList = bookList                }
-
+         
                     self.tableView.reloadData()
                 }
             }
