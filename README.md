@@ -126,3 +126,6 @@ Updated Walkthrough with styling:
 
 <img src='http://g.recordit.co/Q6A8XWeNC5.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
+Final Walkthrough:
+
+<img src='http://g.recordit.co/ZIjWwgHxn9.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />

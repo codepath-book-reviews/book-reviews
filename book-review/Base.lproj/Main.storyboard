@@ -11,7 +11,7 @@
         <!--Books-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Books" id="BYZ-38-t0r" customClass="BooksViewController" customModule="book_review" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Books" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="BooksViewController" customModule="book_review" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -275,8 +275,7 @@
                     <connections>
                         <outlet property="passwordText" destination="y7i-Il-v61" id="tv2-nT-sNJ"/>
                         <outlet property="usernameText" destination="mBA-Lx-vYg" id="IAj-sg-3Sg"/>
-                        <segue destination="7S5-8Z-zwh" kind="show" id="gQe-a8-pro"/>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="loginSegue" modalPresentationStyle="fullScreen" id="zvp-IH-a0w"/>
+                        <segue destination="7S5-8Z-zwh" kind="show" identifier="loginSegue" id="gQe-a8-pro"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c3t-4g-XqZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -568,7 +567,7 @@
         <!--Books VC-->
         <scene sceneID="tbo-Jz-plO">
             <objects>
-                <navigationController title="Books VC" automaticallyAdjustsScrollViewInsets="NO" id="7S5-8Z-zwh" sceneMemberID="viewController">
+                <navigationController title="Books VC" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="7S5-8Z-zwh" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="All Books" id="9BQ-dz-ROI"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="USb-Yv-LYv">
@@ -587,9 +586,6 @@
             <point key="canvasLocation" x="1952.1739130434785" y="114.50892857142857"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="3mL-xX-89B"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="book cover" width="333" height="512"/>
         <systemColor name="labelColor">
